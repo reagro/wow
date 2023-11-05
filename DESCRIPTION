@@ -1,0 +1,17 @@
+Package: wow
+Type: Package
+Title: research workflows
+Description: Functions to support the development of analytical workflows.
+Version: 0.0-1
+#Depends: 
+Suggests: dplyr, tidyr, rrapply, stringr, httr
+Date: 2023-11-05
+Encoding: UTF-8
+Authors@R: c(
+	person("Robert J.", "Hijmans", role = c("cre", "aut"),  email = "r.hijmans@gmail.com"),
+	person("Pieter", "Pypers", role = "aut"),
+	person("Meklit", "Chernet", role = "ctb")
+	)
+Maintainer: Robert J. Hijmans <r.hijmans@gmail.com> 
+License: GPL (>=3)
+
