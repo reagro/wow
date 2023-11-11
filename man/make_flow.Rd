@@ -1,22 +1,23 @@
-\name{flow}
+\name{make_flow}
 
 \alias{make_flow}
-\alias{run_flow}
 
 \title{
-make a workflow file and run it
+make a workflow file
 }
 
 \description{
-make a workflow file and run it
+make a workflow file
 }
 
 \usage{
 make_flow(path)
-run_flow(path)
 }
  
 \arguments{
   \item{path}{the local path to the project repo}
 }
 
+\seealso{
+\code{\link{run_flow}}
+}

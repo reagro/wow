@@ -4,7 +4,7 @@ Title: research workflows
 Description: Functions to support the development of analytical workflows.
 Version: 0.0-1
 #Depends: 
-Suggests: dplyr, tidyr, rrapply, stringr, httr
+Suggests: gtools
 Date: 2023-11-05
 Encoding: UTF-8
 Authors@R: c(

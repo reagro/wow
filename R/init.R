@@ -1,8 +1,8 @@
 
-init <- function(repo, org="", local=NULL) {
+init <- function(repo, org="", path=NULL) {
 	prj_path <- NULL
-	if (!is.null(local)) {
-		f <- file.path(file.path(local, "setup.R"))
+	if (!is.null(path)) {
+		f <- file.path(file.path(path, "setup.R"))
 	} else {
 		f <- file.path("https://raw.githubusercontent.com", org, repo, "main/setup.R")
 	}
