@@ -1,5 +1,5 @@
 
-init <- function(repo, org="", path=NULL) {
+init <- function(repo, org="", path=NULL, ...) {
 	prj_path <- NULL
 	if (!is.null(path)) {
 		f <- file.path(file.path(path, "setup.R"))
@@ -11,12 +11,8 @@ init <- function(repo, org="", path=NULL) {
 		f <- file.path("https://github.com", org, repo, "setup.R")
 		stop(paste(f, "does not exist"))
 	} else {
-		eval(parse(text=x))
+		fun <- eval(parse(text=x))
 	}
-	if (is.null(prj_path)) {
-		stop("setup.R does not assign a value to 'prj_path'")
-	} 
-	create_folders(prj_path)
-	prj_path
+	fun(...)
 }
 
