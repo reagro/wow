@@ -21,12 +21,12 @@ install_pkgs <- function(x, update=FALSE) {
 		if (!("remotes" %in% installed)) {
 			utils::install.packages("remotes", repos="https://cloud.r-project.org")
 		}
-		i <- gh %in% installed
+		i <- basename(gh) %in% installed
 		if (!all(i)) {
-			remotes::install_github(gh[!i])
+			remotes::install_github(gh[!i], upgrade = "never")
 		}
 		if (update) {
-			remotes::install_github(gh[i])
+			remotes::install_github(gh[i], upgrade = "never")
 		}
 	}
 	invisible()
