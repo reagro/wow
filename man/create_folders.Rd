@@ -7,24 +7,25 @@ create_folders
 }
 
 \description{
-create the skeleton folder structure for an wow project workflow
+create the skeleton folder structure for a wow project workflow	
 }
 
 \usage{
-create_folders(path)
+create_folders(path, shared_path)
 }
  
 \arguments{
-  \item{path}{base path for the project}
+  \item{path}{base path for the project to store the data. A folder "data" will be created and used}
+  \item{shared_path}{path to shared data that is used across projects}
 }
 
 \value{
-character (invisibly) with the folders created.
+list with the paths to the folders created ("data/raw", "data/intermediate", "data/final", "tables", "figures").
 }
 
 \examples{
-x <- create_folders(file.path(tempdir(), "test"))
-x
+WoW <- create_folders(file.path(tempdir(), "test"))
+str(WoW)
 }
 
 
